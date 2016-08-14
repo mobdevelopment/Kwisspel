@@ -1,0 +1,88 @@
+﻿<Window x:Class="QuizGamePack.QuizCRUDWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        Height="500"
+        Width="500"
+        Title="MVVM Light Application"
+        Closing="Window_Closing"
+        DataContext="{Binding Crud, Source={StaticResource Locator}}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Nieuwe vraag:" Margin="10,10,0,0"/>
+            <TextBox Grid.Column="1" Margin="0,10,0,0" Name="Question"/>
+            <Button Grid.Column="2" Margin="0,10,19,0" Command="{Binding AddQuestion}" CommandParameter="{Binding ElementName=Question}">Toevoegen</Button>
+        </Grid>
+
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedQuestion}" ItemsSource="{Binding Questions}" Margin="10,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vraag" Binding="{Binding Text}" Width="270" />
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding AnswerCount}" Width="*" />
+                <DataGridTemplateColumn Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding Source={StaticResource Locator}, Path=Crud.DeleteCommand}" Content="Verwijderen"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <TextBlock Text="{Binding SelectedQuestion.Text}" Margin="10,5,5,5"  FontSize="20" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="11*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Nieuw antwoord:" Margin="10,0,0,0" Grid.RowSpan="2"/>
+            <TextBox Grid.Column="1" Grid.RowSpan="2" Name="Answer"/>
+            <Button Grid.Column="2" Margin="0,0,22,0" Grid.RowSpan="2" Command="{Binding AddAnswer}" CommandParameter="{Binding ElementName=Answer}">Toevoegen</Button>
+        </Grid>
+
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedAnswer}" ItemsSource="{Binding Answers }" Margin="10,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Antwoord" Binding="{Binding Text}" Width="345" />
+               <!-- <DataGridCheckBoxColumn Header="Is correct" Binding="{Binding IsCorrect, UpdateSourceTrigger=PropertyChanged}"  Width="60"/> -->
+                <DataGridTemplateColumn Width="60">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox HorizontalAlignment="Center" IsChecked="{Binding IsCorrect, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding Source={StaticResource Locator}, Path=Crud.DeleteAnswerCommand}" Content="Verwijderen" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </StackPanel>
+</Window>
