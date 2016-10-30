@@ -1,0 +1,17 @@
+﻿<Window x:Class="QuizSpel.View.QuizScorebordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizSpel.View"
+        mc:Ignorable="d"
+        Title="QuizScorebordWindow" Height="300" Width="300"
+        DataContext="{ Binding Quiz, Source={ StaticResource Locator } }">
+    <DataGrid ItemsSource="{ Binding ScoreBoard }" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Width="120" Header="Name" Binding="{ Binding Name }"></DataGridTextColumn>
+            <DataGridTextColumn Width="50" Header="Points" Binding="{ Binding Score }" ></DataGridTextColumn>
+            <DataGridTextColumn Width="*" Header="Quiz" Binding="{ Binding Quiz }" ></DataGridTextColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>

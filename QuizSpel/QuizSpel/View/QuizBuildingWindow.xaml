@@ -1,0 +1,39 @@
+﻿<Window x:Class="QuizSpel.View.QuizBuildingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizSpel.View"
+        mc:Ignorable="d"
+        Title="QuizBuildingWindow" Height="340" Width="700"
+        DataContext="{ Binding QuizManagement, Source={ StaticResource Locator } }">
+    <StackPanel>
+        <WrapPanel Margin="10, 10">
+            <TextBlock>Quiz naam:</TextBlock>
+            <TextBox Text="{ Binding QuizText, Mode=TwoWay }" Width="300" Margin="10, 0"></TextBox>
+            <Button Content="Opslaan" Command="{ Binding AddQuizCommand }" Width="150"/>
+        </WrapPanel>
+        
+        <WrapPanel Margin="10, 0" Height="250" HorizontalAlignment="Center">
+            <DataGrid ItemsSource="{ Binding QuizQuestions }" SelectedItem="{ Binding SelectedQuestion }" Width="300" Height="250" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Question" Width="150" Binding="{ Binding Text }"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Category" Binding="{ Binding Category.Name }" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            <WrapPanel Margin="5, 0" VerticalAlignment="Center">
+                <Button Width="25" Height="25" Command="{ Binding AddToQuizCommand }">+</Button>
+                <Button Width="25" Height="25" Command="{ Binding RemoveFromQuizCommand }">-</Button>
+            </WrapPanel>
+            
+            <DataGrid ItemsSource="{Binding QuizList}" SelectedItem="{ Binding SelectedQuestion }" Width="300" Height="250" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Question" Width="150" Binding="{ Binding Text }"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Category" Binding="{ Binding Category.Name }" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </WrapPanel>
+
+    </StackPanel>
+</Window>

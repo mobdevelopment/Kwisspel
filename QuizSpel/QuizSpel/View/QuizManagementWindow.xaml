@@ -1,0 +1,82 @@
+﻿<Window x:Class="QuizSpel.View.QuizManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizSpel.View"
+        mc:Ignorable="d"
+        Title="QuizManagementWindow" Height="480" Width="500"
+        DataContext="{ Binding QuizManagement, Source={ StaticResource Locator } }">
+    <Grid>
+        <StackPanel>
+            <!-- START Add Question -->
+            <WrapPanel>
+                <TextBlock Width="100" Margin="10, 10, 0, 0">Add Question:</TextBlock>
+                <TextBox Text="{Binding QuestionText, Mode=TwoWay }" Name="Question" Width="250" Margin="0, 10, 0, 0" ></TextBox>
+                <Button Command="{ Binding AddQuestionCommand }" Content="Add Question" Width="100" Margin="0, 10, 10, 0"></Button>
+            </WrapPanel>
+            <!-- END Add Question -->
+            
+            <!-- START Questions List-->
+            <DataGrid ItemsSource="{ Binding Questions }" SelectedItem="{ Binding SelectedQuestion }" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" Height="150">
+                <DataGrid.Columns>
+                    <!-- Question Text-->
+                    <DataGridTextColumn Header="Question" Binding="{ Binding Text }" Width="250"></DataGridTextColumn>
+                    <!-- Amount Answers -->
+                    <DataGridTextColumn Header="Answers" Binding="{ Binding AnswerCount }" Width="120"></DataGridTextColumn>
+                    <!-- Delete Question -->
+                    <DataGridTemplateColumn Header="Action" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{ Binding Source={ StaticResource Locator }, Path=QuizManagement.DeleteQuestionCommand }" Content="Delete"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!-- END Questions List -->
+            
+            <!-- START Selected Question -->
+            <WrapPanel Margin="10, 0, 10, 0">
+                <TextBlock Margin="0, 0, 10, 0">Question:</TextBlock>
+                <TextBlock Text="{ Binding SelectedQuestion.Text }" FontSize="20" ></TextBlock>
+            </WrapPanel>
+            <!-- END Selected Question -->
+            
+            <!-- START Add Answer -->
+            <WrapPanel>
+                <TextBlock Width="100" Margin="10, 10, 0, 0">Add Answer:</TextBlock>
+                <TextBox Text="{Binding AnswerText, Mode=TwoWay }" Name="Answer" Width="160" Margin="0, 10, 0, 0"></TextBox>
+                <TextBlock Margin="10, 10, 0, 0">IsCorrect:</TextBlock>
+                <CheckBox IsChecked="{ Binding AnswerCorrect}" Name="IsCorrect" Margin="5, 10, 10, 0"></CheckBox>
+                <Button Command="{ Binding AddAnswerCommand }" Content="Add Answer" Width="100" Margin="0, 10, 10, 0"></Button>
+            </WrapPanel>
+            <!-- END Add Answer -->
+            
+            <!-- START Answers List -->
+            <DataGrid SelectedItem="{ Binding SelectedAnswer }" ItemsSource="{ Binding Answers }" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" Height="120">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Answer" Binding="{ Binding Text }" Width="250"></DataGridTextColumn>
+                    <DataGridTemplateColumn Header="IsCorrect" Width="120">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox HorizontalAlignment="Center" IsChecked="{ Binding IsCorrect, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"></CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Action" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{ Binding Source={ StaticResource Locator }, Path=QuizManagement.DeleteAnswerCommand }" Content="Delete"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!-- END Answers List -->
+            <WrapPanel Margin="10, 0, 10, 0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Command="{Binding ShowQuizBuildingWindowCommand}" Content="Create Quiz" Height="35" Width="75"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>
