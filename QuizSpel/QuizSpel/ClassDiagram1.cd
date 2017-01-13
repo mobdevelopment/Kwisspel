@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuizSpel.App" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizMenuWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.Model.Answer" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAA=</HashCode>
+      <FileName>Model\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.Context" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAACAAAAEYAAAAAAAAAA=</HashCode>
+      <FileName>Model\Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.DummyQuestionRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\DummyQuestionRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.Model.Question" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAACAA=</HashCode>
+      <FileName>Model\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.Quiz" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Model\Quiz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.QuizList" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAA=</HashCode>
+      <FileName>Model\QuizList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.QuizTheme" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEEAAAAggAAAAAAAAAQAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\QuizTheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Model.Scoreboard" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Model\Scoreboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Properties.Resources" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.View.QuizBuildingWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizBuildingWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizDetailWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizDetailWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizGameoverWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizGameoverWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizManagementWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizManagementWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizScorebordWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizScorebordWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizSelectionWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizSelectionWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.View.QuizWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\QuizWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuizSpel.ViewModel.AnswerViewModel" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAQAAAEAAAAAAAAAAAAAAAABAAJACAAAAAA=</HashCode>
+      <FileName>ViewModel\AnswerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.MainViewModel" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICICAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ViewModel\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.QuestionViewModel" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAABAAAAAAAAAAAAQAACBQEAACAAACAI=</HashCode>
+      <FileName>ViewModel\QuestionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.QuizListViewModel" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAAAAAAAAFAAAAAAQAAAA=</HashCode>
+      <FileName>ViewModel\QuizListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.QuizManagementViewModel" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>1CEJBAQABggAIAGRgQCCAAQJABEUFABMYjAxASBGESg=</HashCode>
+      <FileName>ViewModel\QuizManagementViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.QuizPlayViewModel" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gDAgAiMKAgAgAAlQgSCAACABEADAEAAEUBicAQgIIAU=</HashCode>
+      <FileName>ViewModel\QuizPlayViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.QuizViewModel" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>ViewModel\QuizViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.ScoreboardViewModel" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAgAAAAAAAQAAAAAAAABAAAAAAQAAAA=</HashCode>
+      <FileName>ViewModel\ScoreboardViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuizSpel.ViewModel.ViewModelLocator" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFEQAAAA=</HashCode>
+      <FileName>ViewModel\ViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="QuizSpel.Model.IAnswerRepository" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IAnswerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="QuizSpel.Model.IQuestionRepository" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IQuestionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="QuizSpel.Model.IQuizListRepository" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IQuizListRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="QuizSpel.Model.IQuizRepository" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IQuizRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="QuizSpel.Model.IScoreboardRepository" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IScoreboardRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="QuizSpel.Model.IThemeRepository" Collapsed="true">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\IThemeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
